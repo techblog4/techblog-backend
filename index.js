@@ -233,7 +233,7 @@ app.post("/addpost",upload.single('image'), verifyToken,(req,res)=>{
         isVerified:'0',
         date1:date,
         email:req.body.currentEmail,
-        image: 'http://localhost:4001/images/'+ req.file.filename
+        image: 'https://techblogict.herokuapp.com/images/'+ req.file.filename
        
     }
   
@@ -405,7 +405,7 @@ app.put('/update',upload.single("image"),verifyToken,(req,res)=>{
     if(req.file != undefined)
     {
     const file = req.file;
-    img = 'http://localhost:4001/images/'+ req.file.filename;
+    img = 'https://techblogict.herokuapp.com/images/'+ req.file.filename;
     }
     else
     {
